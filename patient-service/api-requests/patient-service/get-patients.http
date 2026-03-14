@@ -1,0 +1,3 @@
+### GET request to retrieve existing patients;
+GET http://localhost:4000/api/v1/patients
+###
