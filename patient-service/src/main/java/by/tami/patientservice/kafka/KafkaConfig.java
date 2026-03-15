@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Configuration
 public class KafkaConfig {
-//ss
+
     @Bean
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();
