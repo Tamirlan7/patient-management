@@ -3,8 +3,8 @@ POST http://localhost:4000/api/v1/patients
 Content-Type: application/json
 
 {
-  "name": "Joe Biden GRPC Kafka 22",
-  "email": "joe.biden@proton.me222",
+  "name": "Joe Biden GRPC Kafka Consumer 1",
+  "email": "joe.biden.consumer1@proton.me",
   "address": " 1313 E Main St, Portage, MI 49024",
   "dateOfBirth": "2006-05-26",
   "registeredDate": "2026-03-11"
