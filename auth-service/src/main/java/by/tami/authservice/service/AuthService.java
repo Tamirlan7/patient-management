@@ -3,6 +3,7 @@ package by.tami.authservice.service;
 import by.tami.authservice.dto.LoginRequestDto;
 import by.tami.authservice.model.User;
 import by.tami.authservice.util.JwtUtil;
+import io.jsonwebtoken.JwtException;
 import org.springframework.aop.ClassFilter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
@@ -29,5 +30,14 @@ public class AuthService {
                         request.getPassword(), u.getPassword()
                 ))
                 .map(u -> jwtUtil.generateToken(u.getEmail(), u.getRole()));
+    }
+
+    public boolean validateToken(String token) {
+        try {
+            jwtUtil.validateToken(token);
+            return true;
+        } catch (JwtException e) {
+            return false;
+        }
     }
 }
